@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* Custom scrollbar */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Focus states */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #EEBB5B;
+  box-shadow: 0 0 0 3px rgba(238, 187, 91, 0.1);
+}
+
+/* Transitions */
+.transition-colors {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+/* Primary background color */
+.bg-primary {
+  background-color: #EEBB5B;
+}
+
+.bg-primary-light {
+  background-color: #FFE4B2;
+}
+
+/* Additional styles for role system and improved navigation */
+
+/* Prevent content jumping on desktop */
+@media (min-width: 768px) {
+  .md\:ml-64 {
+    margin-left: 16rem !important;
+  }
+}
+
+/* Smooth sidebar transitions */
+.sidebar-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Improved focus states for better accessibility */
+button:focus-visible {
+  outline: 2px solid #EEBB5B;
+  outline-offset: 2px;
+}
+
+/* Better hover states */
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar for sidebar */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
